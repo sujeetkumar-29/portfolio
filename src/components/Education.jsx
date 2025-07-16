@@ -1,50 +1,54 @@
 import React from 'react';
-import { GraduationCap } from 'lucide-react';
 
 const educationData = [
   {
-    degree: 'B.Tech in Computer Science',
+    course: 'B.Tech in Computer Science',
     institution: 'Shri Shankaracharya Technical Campus, Bhilai',
-    duration: '2021 - 2025',
-    details: 'Studying core subjects like DSA, DBMS, OS, CN, and Web Development with a focus on practical applications and projects.',
+    duration: '2022 - Present',
+    logo: '/assets/shankaraLogo.png',
+    description:
+      'Pursuing B.Tech with a focus on full stack web development, data structures, and modern technologies such as React, Node.js, and MongoDB.',
   },
   {
-    degree: 'Higher Secondary (12th)',
-    institution: 'Govt. Multipurpose Higher Secondary School, Durg',
-    duration: '2019 - 2021',
-    details: 'Completed with focus on Physics, Chemistry, and Mathematics under the Chhattisgarh Board.',
+    course: 'Higher Secondary (12th)',
+    institution: 'Saraswati Vidya Mandir, Bokaro',
+    duration: '2020 - 2022',
+    logo: '/assets/svm.png',
+    description:
+      'Completed with a focus on Physics, Chemistry, and Mathematics. Developed a strong foundation in problem-solving and logical thinking.',
   },
   {
-    degree: 'Secondary (10th)',
-    institution: 'Govt. Multipurpose Higher Secondary School, Durg',
-    duration: '2018 - 2019',
-    details: 'Completed with distinction under the Chhattisgarh Board of Secondary Education (CGBSE).',
+    course: 'Secondary (10th)',
+    institution: 'Saraswati Vidya Mandir, Bokaro',
+    duration: '2018 - 2020',
+    logo: '/assets/svm.png',
+    description:
+      'Completed basic education with distinction. Developed an early interest in computers and technology.',
   },
 ];
 
 const Education = () => {
   return (
-    <section id="education" className="py-20 px-4 sm:px-8 bg-white text-gray-800">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-center flex items-center justify-center gap-3">
-          <GraduationCap className="w-8 h-8" />
-          Education
-        </h2>
-        <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-16">
-          My academic background has provided a strong foundation in computer science and problem-solving,
-          shaping my interest in building practical software solutions.
-        </p>
-
+    <section id="education" className="py-16 bg-white px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Education</h2>
         <div className="space-y-8">
           {educationData.map((edu, index) => (
             <div
               key={index}
-              className="border-l-4 border-blue-500 pl-6 py-4 bg-gray-50 rounded-md shadow-sm"
+              className="flex flex-col sm:flex-row items-start sm:items-center border-l-4 border-blue-500 gap-6 bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition"
             >
-              <h3 className="text-xl font-semibold">{edu.degree}</h3>
-              <p className="text-gray-700 text-sm font-medium">{edu.institution}</p>
-              <p className="text-sm text-gray-500 mb-2">{edu.duration}</p>
-              <p className="text-gray-600 text-sm">{edu.details}</p>
+              <img
+                src={edu.logo}
+                alt={`${edu.institution} logo`}
+                className="w-20 h-20 object-contain rounded"
+              />
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900">{edu.course}</h3>
+                <p className="text-gray-700 font-medium">{edu.institution}</p>
+                <p className="text-sm text-gray-500 mb-2">{edu.duration}</p>
+                <p className="text-gray-600 text-sm">{edu.description}</p>
+              </div>
             </div>
           ))}
         </div>
