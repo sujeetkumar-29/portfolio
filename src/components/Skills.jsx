@@ -115,15 +115,15 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 text-gray-900">
+    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-wider text-gray-900">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-wider text-gray-900 dark:text-white">
             SKILLS
           </h1>
           <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 font-light">
+          <p className="text-xl text-gray-600 dark:text-gray-400 font-light">
             Cutting Edge Technical Expertise
           </p>
         </div>
@@ -132,7 +132,7 @@ const Skills = () => {
         <div className="space-y-16">
           {skillCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="text-center">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-gray-800">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-gray-800 dark:text-gray-200">
                 {category.title}
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 md:gap-12 justify-items-center">
@@ -141,19 +141,16 @@ const Skills = () => {
                     key={skillIndex} 
                     className="flex flex-col items-center group cursor-pointer"
                   >
-                    <div className="w-16 h-16 md:w-20 md:h-20 mb-4 flex items-center justify-center bg-white rounded-lg group-hover:bg-gray-100 transition-all duration-300 group-hover:scale-110 shadow-lg border border-gray-200">
+                    <div className="w-16 h-16 md:w-20 md:h-20 mb-4 flex items-center justify-center bg-white dark:bg-gray-800 rounded-lg group-hover:bg-gray-100 dark:group-hover:bg-gray-700 transition-all duration-300 group-hover:scale-110 shadow-lg border border-gray-200 dark:border-gray-700">
                       <img 
                         src={skill.icon} 
                         alt={skill.name}
-                        className="w-10 h-10 md:w-12 md:h-12 object-contain group-hover:drop-shadow-lg transition-all duration-300"
-                        style={{ 
-                          filter: skill.name === "Next.js" || skill.name === "Express.js" || skill.name === "GitHub" 
-                            ? 'invert(0)' 
-                            : 'none' 
-                        }}
+                        className={`w-10 h-10 md:w-12 md:h-12 object-contain group-hover:drop-shadow-lg transition-all duration-300 
+                          ${["Next.js", "Express.js", "GitHub"].includes(skill.name) ? "dark:invert" : ""}
+                        `}
                       />
                     </div>
-                    <h3 className="text-sm md:text-base font-medium text-center group-hover:text-blue-500 transition-colors duration-300 text-gray-700">
+                    <h3 className="text-sm md:text-base font-medium text-center text-gray-700 dark:text-gray-300 group-hover:text-blue-500 transition-colors duration-300">
                       {skill.name}
                     </h3>
                   </div>
@@ -169,25 +166,25 @@ const Skills = () => {
             <div className="text-3xl md:text-4xl font-bold text-blue-500 mb-2 group-hover:scale-110 transition-transform duration-300">
               18+
             </div>
-            <div className="text-gray-600 text-sm md:text-base">Technologies</div>
+            <div className="text-gray-600 dark:text-gray-400 text-sm md:text-base">Technologies</div>
           </div>
           <div className="group">
             <div className="text-3xl md:text-4xl font-bold text-green-500 mb-2 group-hover:scale-110 transition-transform duration-300">
               3+
             </div>
-            <div className="text-gray-600 text-sm md:text-base">Years Experience</div>
+            <div className="text-gray-600 dark:text-gray-400 text-sm md:text-base">Years Experience</div>
           </div>
           <div className="group">
             <div className="text-3xl md:text-4xl font-bold text-purple-500 mb-2 group-hover:scale-110 transition-transform duration-300">
               20+
             </div>
-            <div className="text-gray-600 text-sm md:text-base">Projects</div>
+            <div className="text-gray-600 dark:text-gray-400 text-sm md:text-base">Projects</div>
           </div>
           <div className="group">
             <div className="text-3xl md:text-4xl font-bold text-orange-500 mb-2 group-hover:scale-110 transition-transform duration-300">
               100%
             </div>
-            <div className="text-gray-600 text-sm md:text-base">Dedication</div>
+            <div className="text-gray-600 dark:text-gray-400 text-sm md:text-base">Dedication</div>
           </div>
         </div>
       </div>
