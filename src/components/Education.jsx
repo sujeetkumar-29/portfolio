@@ -29,7 +29,7 @@ const educationData = [
 
 const Education = () => {
   return (
-    <section id="education" className="py-16 bg-white px-4 sm:px-6 lg:px-8">
+    <section id="education" className="py-16 bg-gray-50 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Education</h2>
         <div className="space-y-8">
