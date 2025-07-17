@@ -29,25 +29,35 @@ const educationData = [
 
 const Education = () => {
   return (
-    <section id="education" className="py-16 bg-gray-50 px-4 sm:px-6 lg:px-8">
+    <section id="education" className="py-16 bg-gray-50 dark:bg-gray-900 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Education</h2>
+        <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-12 text-center">
+          Education
+        </h2>
         <div className="space-y-8">
           {educationData.map((edu, index) => (
             <div
               key={index}
-              className="flex flex-col sm:flex-row items-start sm:items-center border-l-4 border-blue-500 gap-6 bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition"
+              className="flex flex-col sm:flex-row items-start sm:items-center border-l-4 border-blue-500 gap-6 bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-md transition dark:shadow-gray-700"
             >
               <img
                 src={edu.logo}
                 alt={`${edu.institution} logo`}
-                className="w-20 h-20 object-contain rounded"
+                className="w-20 h-20 object-contain rounded bg-white dark:bg-gray-100 p-1"
               />
               <div>
-                <h3 className="text-xl font-semibold text-gray-900">{edu.course}</h3>
-                <p className="text-gray-700 font-medium">{edu.institution}</p>
-                <p className="text-sm text-gray-500 mb-2">{edu.duration}</p>
-                <p className="text-gray-600 text-sm">{edu.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  {edu.course}
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300 font-medium">
+                  {edu.institution}
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                  {edu.duration}
+                </p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">
+                  {edu.description}
+                </p>
               </div>
             </div>
           ))}
