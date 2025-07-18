@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const projects = [
   {
@@ -25,7 +26,13 @@ const projects = [
 const Projects = () => {
   return (
     <section id="projects" className="py-20 px-4 sm:px-8 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-white">
-      <div className="max-w-6xl mx-auto text-center">
+      <motion.div
+        className="max-w-6xl mx-auto text-center"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         <h2 className="text-4xl sm:text-5xl font-bold mb-6 flex items-center justify-center gap-3">
           Projects
         </h2>
@@ -34,11 +41,29 @@ const Projects = () => {
           clean UI design, and efficient data handling.
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-10"
+          initial="hidden"
+          whileInView="visible"
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.2,
+              },
+            },
+          }}
+          viewport={{ once: true }}
+        >
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
               className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-5 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5 }}
+              whileHover={{ scale: 1.02 }}
             >
               <img
                 src={project.image}
@@ -79,10 +104,10 @@ const Projects = () => {
                   Code
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
