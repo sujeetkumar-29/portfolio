@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Send } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,10 +24,22 @@ const Contact = () => {
       id="contact"
       className="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 py-20 px-4 sm:px-8"
     >
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">
+      <motion.div
+        className="max-w-5xl mx-auto"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <motion.h2
+          className="text-4xl sm:text-5xl font-bold text-center mb-4"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
           Contact Me
-        </h2>
+        </motion.h2>
         <p className="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
           Feel free to reach out for opportunities, collaborations, or just to
           say hello! I'm always open to meaningful conversations.
@@ -34,21 +47,35 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Left - Contact Info */}
-          <div className="space-y-6">
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             <div className="flex items-center gap-4">
               <Mail className="text-blue-600 w-6 h-6" />
-              <span className="text-gray-700 dark:text-gray-300">sujeetkr503@gmail.com</span>
+              <span className="text-gray-700 dark:text-gray-300">
+                sujeetkr503@gmail.com
+              </span>
             </div>
             <div className="flex items-center gap-4">
               <MapPin className="text-blue-600 w-6 h-6" />
-              <span className="text-gray-700 dark:text-gray-300">Durg, Chhattisgarh, India</span>
+              <span className="text-gray-700 dark:text-gray-300">
+                Durg, Chhattisgarh, India
+              </span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right - Contact Form */}
-          <form
+          <motion.form
             onSubmit={handleSubmit}
             className="bg-gray-200 dark:bg-gray-800 p-6 rounded-lg shadow-md space-y-4"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
           >
             <input
               type="text"
@@ -77,16 +104,18 @@ const Contact = () => {
               required
               className="w-full p-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <button
+            <motion.button
               type="submit"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-all duration-300"
             >
               <Send className="w-5 h-5" />
               Send Message
-            </button>
-          </form>
+            </motion.button>
+          </motion.form>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

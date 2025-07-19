@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const educationData = [
   {
@@ -30,15 +31,33 @@ const educationData = [
 const Education = () => {
   return (
     <section id="education" className="py-16 bg-gray-50 dark:bg-gray-900 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-12 text-center">
+      <motion.div
+        className="max-w-5xl mx-auto"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <motion.h2
+          className="text-3xl font-bold text-gray-800 dark:text-white mb-12 text-center"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
           Education
-        </h2>
+        </motion.h2>
+
         <div className="space-y-8">
           {educationData.map((edu, index) => (
-            <div
+            <motion.div
               key={index}
               className="flex flex-col sm:flex-row items-start sm:items-center border-l-4 border-blue-500 gap-6 bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-md transition dark:shadow-gray-700"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
             >
               <img
                 src={edu.logo}
@@ -59,10 +78,10 @@ const Education = () => {
                   {edu.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
