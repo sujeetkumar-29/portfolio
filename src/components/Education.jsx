@@ -6,26 +6,27 @@ const educationData = [
     course: 'B.Tech in Computer Science',
     institution: 'Shri Shankaracharya Technical Campus, Bhilai',
     duration: '2022 - Present',
+    cgpa :8.5,
     logo: '/assets/shankaraLogo.png',
     description:
       'Pursuing B.Tech with a focus on full stack web development, data structures, and modern technologies such as React, Node.js, and MongoDB.',
   },
-  {
-    course: 'Higher Secondary (12th)',
-    institution: 'Saraswati Vidya Mandir, Bokaro',
-    duration: '2020 - 2022',
-    logo: '/assets/svm.png',
-    description:
-      'Completed with a focus on Physics, Chemistry, and Mathematics. Developed a strong foundation in problem-solving and logical thinking.',
-  },
-  {
-    course: 'Secondary (10th)',
-    institution: 'Saraswati Vidya Mandir, Bokaro',
-    duration: '2018 - 2020',
-    logo: '/assets/svm.png',
-    description:
-      'Completed basic education with distinction. Developed an early interest in computers and technology.',
-  },
+  // {
+  //   course: 'Higher Secondary (12th)',
+  //   institution: 'Saraswati Vidya Mandir, Bokaro',
+  //   duration: '2020 - 2022',
+  //   logo: '/assets/svm.png',
+  //   description:
+  //     'Completed with a focus on Physics, Chemistry, and Mathematics. Developed a strong foundation in problem-solving and logical thinking.',
+  // },
+  // {
+  //   course: 'Secondary (10th)',
+  //   institution: 'Saraswati Vidya Mandir, Bokaro',
+  //   duration: '2018 - 2020',
+  //   logo: '/assets/svm.png',
+  //   description:
+  //     'Completed basic education with distinction. Developed an early interest in computers and technology.',
+  // },
 ];
 
 const Education = () => {
@@ -73,6 +74,9 @@ const Education = () => {
                 </p>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
                   {edu.duration}
+                </p>
+                <p className="text-sm text-gray-900 dark:text-gray-300 mb-2">
+                  CGPA:{edu.cgpa}
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
                   {edu.description}

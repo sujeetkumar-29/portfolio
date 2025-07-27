@@ -8,7 +8,7 @@ const projects = [
     description:
       'A full-stack MERN app to book doctor appointments with role-based dashboards, secure authentication, and admin features.',
     tech: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Tailwind CSS', 'JWT'],
-    image: '/images/doctor-app.png',
+    image: '/assets/pulsemate.png',
     demoLink: 'https://doctor-booking-demo.vercel.app',
     codeLink: 'https://github.com/sujeetkumar-29/doctor-appointment-booking',
   },
@@ -17,7 +17,7 @@ const projects = [
     description:
       'Track daily/monthly expenses by category with interactive charts and clean UI. Built with React and local storage.',
     tech: ['React', 'JavaScript', 'Chart.js', 'LocalStorage', 'Tailwind CSS'],
-    image: '/images/expense-tracker.png',
+    image: '/assets/expensetracker.png',
     demoLink: 'https://expense-tracker-demo.vercel.app',
     codeLink: 'https://github.com/sujeetkumar-29/expense-tracker',
   },
