@@ -3,6 +3,5 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root{
-    margin: 0;
-    
+    margin: 0;  
 }

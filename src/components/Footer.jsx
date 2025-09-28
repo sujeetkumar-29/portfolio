@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 const Footer = () => {
   return (
        <div className="bg-white dark:bg-gray-900 relative text-gray-800">
-  <div
+  {/* <div
     className="absolute inset-0 z-0 pointer-events-none"
     style={{
       backgroundImage: `
@@ -14,7 +14,7 @@ const Footer = () => {
         repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)
       `,
     }}
-  />  
+  />   */}
     <footer className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 border-t dark:border-gray-700 px-4 sm:px-8">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center py-6">
         {/* Left - Branding */}

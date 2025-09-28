@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Download,
-  MessageCircle,
   Github,
   Linkedin,
   Mail,
@@ -27,21 +26,21 @@ const Home = () => {
   ];
 
   return (
-   <div className="min-h-screen w-full bg-white relative text-gray-800">
-  <div
-    className="absolute inset-0 z-0 pointer-events-none"
-    style={{
-      backgroundImage: `
-        repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),
-        repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),
-        repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),
-        repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)
-      `,
-    }}
-  />     
+    <div className="min-h-screen w-full relative text-gray-800 dark:text-gray-100 bg-gray-50 dark:bg-gray-900">
+      {/* Background grid */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none opacity-50"
+        style={{
+          backgroundImage: `
+            repeating-linear-gradient(0deg, transparent, transparent 14px, rgba(75,85,99,0.06) 14px, rgba(75,85,99,0.06) 15px),
+            repeating-linear-gradient(90deg, transparent, transparent 14px, rgba(75,85,99,0.06) 14px, rgba(75,85,99,0.06) 15px)
+          `,
+        }}
+      />
+
       <section
         id="home"
-        className="min-h-screen bg-gradient-to-br from-blue-50 via-gray-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-black flex items-center justify-center px-4 sm:px-6 lg:px-8"
+        className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative z-10"
       >
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-10 my-6">
@@ -54,7 +53,7 @@ const Home = () => {
               transition={{ duration: 0.6 }}
             >
               <div className="mb-6">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-gray-900 dark:text-white">
                   Hi, I'm{' '}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                     Sujeet Kumar
@@ -73,9 +72,7 @@ const Home = () => {
               </div>
 
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl leading-relaxed">
-                Passionate Full Stack Developer specializing in the MERN stack (MongoDB, Express.js, React.js, Node.js).
-                I create dynamic, responsive web applications with modern technologies and best practices.
-                Always eager to learn new technologies and solve complex problems with innovative solutions.
+                Passionate Full Stack Developer specializing in the MERN stack (MongoDB, Express.js, React.js, Node.js). I create dynamic, responsive web applications with modern technologies and best practices. Always eager to learn new technologies and solve complex problems with innovative solutions.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
@@ -109,7 +106,7 @@ const Home = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.2 }}
-                      className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 border hover:border-blue-600 dark:border-gray-600 dark:hover:border-blue-400"
+                      className="p-3 bg-white/20 dark:bg-gray-800/30 backdrop-blur-md rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 border border-gray-200 dark:border-gray-600 hover:border-blue-600 dark:hover:border-blue-400"
                       aria-label={social.label}
                     >
                       <IconComponent className="h-6 w-6" />
@@ -127,37 +124,19 @@ const Home = () => {
               transition={{ duration: 0.6 }}
             >
               <div className="relative mb-40">
-                <div className="relative bg-white dark:bg-gray-800 rounded-full shadow-2xl">
+                <div className="relative rounded-full shadow-2xl bg-white/20 dark:bg-gray-800/30 backdrop-blur-md">
                   <img
                     src="/assets/sujeet.jpg"
                     alt="Sujeet Kumar"
-                    className="w-40 h-40 sm:w-96 sm:h-96 lg:w-40 lg:h-40 xl:w-60 xl:h-60 rounded-full border shadow-lg"
+                    className="w-40 h-40 sm:w-96 sm:h-96 lg:w-40 lg:h-40 xl:w-60 xl:h-60 rounded-full border border-gray-200 dark:border-gray-600 shadow-lg"
                   />
                 </div>
-
-                {/* Floating Elements */}
-                {/* <motion.div
-                  className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg"
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ repeat: Infinity, duration: 2 }}
-                >
-                  <Code className="h-8 w-8 text-white" />
-                </motion.div> */}
-                {/* <motion.div
-                  className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center shadow-lg"
-                  animate={{ y: [0, 10, 0] }}
-                  transition={{ repeat: Infinity, duration: 1.5 }}
-                >
-                  <MessageCircle className="h-6 w-6 text-white" />
-                </motion.div> */}
               </div>
             </motion.div>
           </div>
         </div>
       </section>
-
     </div>
-
   );
 };
 
