@@ -9,8 +9,8 @@ const projects = [
       "A full-stack MERN app to book doctor appointments with role-based dashboards, secure authentication, and admin features.",
     tech: ["React", "Node.js", "MongoDB", "Express.js", "Tailwind CSS", "JWT"],
     image: "/assets/pulsemate.png",
-    demoLink: "https://doctor-booking-demo.vercel.app",
-    codeLink: "https://github.com/sujeetkumar-29/doctor-appointment-booking",
+    demoLink: "https://puslemate-doctor-appointment-bookin.vercel.app/",
+    codeLink: "https://github.com/sujeetkumar-29/puslemate-doctor-appointment-booking",
   },
   {
     title: "Expense Tracker",
@@ -18,9 +18,63 @@ const projects = [
       "Track daily/monthly expenses by category with interactive charts and clean UI. Built with React and local storage.",
     tech: ["React", "JavaScript", "Chart.js", "LocalStorage", "Tailwind CSS"],
     image: "/assets/expensetracker.png",
-    demoLink: "https://expense-tracker-demo.vercel.app",
+    demoLink: "https://expense-tracker-frontend-two-green.vercel.app/",
     codeLink: "https://github.com/sujeetkumar-29/expense-tracker",
   },
+  {
+    title: "Multiple AI Tools",
+    description:
+      "A collection of AI-powered tools including text generation, image generation, and code generation using OpenAI's API.",
+    tech: ["React", "JavaScript", "Chart.js", "LocalStorage", "Tailwind CSS"],
+    image: "/assets/multipleaitools.png",
+    demoLink: "https://tasktrek-task-manager-frontend.vercel.app/",
+    codeLink: "hhttps://github.com/sujeetkumar-29/tasktrek-task-manager",
+  },
+  {
+    title: "TaskTrek- Task Management App",
+    description:
+      "TaskTrek is a full-stack productivity application for managing tasks, built with a React + Vite frontend and an Express + MongoDB backend.",
+    tech: ["React", "JavaScript", "Chart.js", "LocalStorage", "Tailwind CSS"],
+    image: "/assets/tasktrek.png",
+    demoLink: "https://all-write-ai-studio-frontend-1vghw4ht8-sujeetkumar-29s-projects.vercel.app/",
+    codeLink: "https://github.com/sujeetkumar-29/AllWrite-Ai-Studio",
+  },
+  {
+    title: "Project with Javascript",
+    description:
+      "A collection of simple JavaScript projects demonstrating various functionalities and concepts.",
+    tech: [ "JavaScript", "HTML", "CSS"],
+    image: "/assets/projectjs.png",
+    demoLink: "https://sujeetkumar-29.github.io/Project-with-JavaScript/",
+    codeLink: "hhttps://github.com/sujeetkumar-29/Project-with-JavaScript",
+  },
+  {
+    title: "PicServe- image website",
+    description:
+    "PicServe is a web application that allows users to upload images and download them. It provides a simple and intuitive interface for managing image files.",
+    tech: ["HTML", "JavaScript", "CSS", "Node.js", "Express.js",  "MongoDB", "EJS",],
+    image: "/assets/picserve.png",
+    demoLink: "https://picserve-img-web.onrender.com/images",
+    codeLink: "https://github.com/sujeetkumar-29/PicServe-img-web",
+  },
+  {
+    title: "Pagepixel- Landing Page",
+    description:
+      "A collection of AI-powered tools including text generation, image generation, and code generation using OpenAI's API.",
+    tech: ["React", "JavaScript", "Tailwind CSS"],
+    image: "/assets/pagepixel.png",
+    demoLink: "https://pagepixel.netlify.app/",
+    codeLink: "https://github.com/sujeetkumar-29/PagePixel-Image-generator-app-LandingPage",
+  },
+  // {
+  //   title: "Quora Post with crud operation",
+  //   description:
+  //     "This project demonstrates a RESTful CRUD application for managing Quora-like posts. It provides functionality to create, read, update, and delete posts, showcasing the integration of back-end logic and front-end templates.",
+  //   tech: ["HTML", "JavaScript", "CSS", "Node.js", "Express.js",  "MongoDB", "EJS",],
+  //   image: "/assets/quorapost.png",
+  //   demoLink: "https://quora-posts-by-restful-api-crud-operation.onrender.com/posts",
+  //   codeLink: "https://github.com/sujeetkumar-29/Quora-posts-by-RESTful-API-CRUD-operation",
+  // },
 ];
 
 const Projects = () => {
