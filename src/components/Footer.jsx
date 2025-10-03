@@ -28,7 +28,7 @@ const Footer = () => {
         {/* Middle - Social Links */}
         <div className="flex gap-6 text-gray-700 dark:text-gray-300">
           <a
-            href="https://github.com/sujeetkr503"
+            href="https://github.com/sujeetkumar-29"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-600 dark:hover:text-blue-400 transition"
@@ -36,7 +36,7 @@ const Footer = () => {
             <Github className="w-5 h-5" />
           </a>
           <a
-            href="https://linkedin.com/in/sujeetkr503"
+            href="https://www.linkedin.com/in/sujeetkumar29"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-600 dark:hover:text-blue-400 transition"

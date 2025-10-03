@@ -17,10 +17,15 @@ const Skills = () => {
           color: "#3178C6",
         },
         {
-          name: "Python",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-          color: "#3776AB",
-        },
+          name: "C++",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+          color: "#00599C",
+        }
+        // {
+        //   name: "Python",
+        //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        //   color: "#3776AB",
+        // },
       ],
     },
     {
@@ -48,7 +53,7 @@ const Skills = () => {
         },
         {
           name: "Tailwind CSS",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
           color: "#06B6D4",
         },
         {
@@ -86,11 +91,11 @@ const Skills = () => {
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
           color: "#4479A1",
         },
-        {
-          name: "Redis",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
-          color: "#DC382D",
-        },
+        // {
+        //   name: "Redis",
+        //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+        //   color: "#DC382D",
+        // },
       ],
     },
     {
@@ -111,6 +116,11 @@ const Skills = () => {
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
           color: "#007ACC",
         },
+        {
+          name: "Postman",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+          color: "#FF6C37",
+        }
       ],
     },
   ];
@@ -206,7 +216,7 @@ const Skills = () => {
           </div>
 
           {/* Bottom Stats */}
-          <motion.div
+          {/* <motion.div
             className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -253,7 +263,7 @@ const Skills = () => {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </section>
     </div>

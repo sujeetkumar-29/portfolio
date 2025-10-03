@@ -1,20 +1,16 @@
 import React from 'react';
 import {
-  Download,
   Github,
   Linkedin,
   Mail,
   MapPin,
   Code,
   Briefcase,
+  Eye,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Home = () => {
-  const handleResumeDownload = () => {
-    console.log('Downloading resume...');
-  };
-
   const handleHireMe = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -76,15 +72,17 @@ const Home = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-                <motion.button
-                  onClick={handleResumeDownload}
+                <motion.a
+                  href="https://drive.google.com/file/d/1CmhT9YLf-rKHIMYMom8bgBAj5cDrW6QA/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg"
                 >
-                  <Download className="h-5 w-5" />
-                  Download Resume
-                </motion.button>
+                  <Eye className="h-5 w-5" />
+                  View Resume
+                </motion.a>
                 <motion.button
                   onClick={handleHireMe}
                   whileHover={{ scale: 1.05 }}
